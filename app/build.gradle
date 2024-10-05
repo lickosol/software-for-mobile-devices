@@ -7,6 +7,10 @@ android {
     namespace 'com.zaynulina.myfirstapp'
     compileSdk 32
 
+    viewBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.zaynulina.myfirstapp"
         minSdk 21

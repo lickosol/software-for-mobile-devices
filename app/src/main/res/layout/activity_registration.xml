@@ -40,87 +40,98 @@
         app:layout_constraintStart_toStartOf="@id/welcome"
         app:layout_constraintTop_toBottomOf="@id/welcome" />
 
-    <TextView
+    <Button
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="32dp"
+        android:text="По email"
+        android:textColor="#505e23"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#d5e29f"
+        app:layout_constraintStart_toStartOf="@id/registration"
+        app:layout_constraintTop_toBottomOf="@id/registration" />
+
+    <Button
         android:id="@+id/number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="-20dp"
         android:layout_marginTop="32dp"
+        android:backgroundTint="#d5e29f"
         android:text="По номеру"
-        android:textColor="@color/black"
-        android:background="#90ffffff"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@id/registration"
-        app:layout_constraintTop_toBottomOf="@id/registration" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="32dp"
-        android:text="По email"
-        android:background="#90ffffff"
         android:textColor="#505e23"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/registration"
         app:layout_constraintTop_toBottomOf="@id/registration" />
-    <EditText
-        android:id="@+id/mail"
+
+
+    <LinearLayout
+        android:id="@+id/lnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="86dp"
-        android:hint="Введите email"
-        android:textColor="@color/black"
-        android:background="#90ffffff"
-        android:inputType="textEmailAddress"
-        android:textSize="28sp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"
         app:layout_constraintStart_toStartOf="@id/number"
         app:layout_constraintTop_toBottomOf="@id/number"
-         />
+        >
 
-    <EditText
-        android:id="@+id/pw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:hint="Введите пароль"
-        android:textColor="@color/black"
-        android:background="#90ffffff"
-        android:inputType="text"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@id/mail"
-        app:layout_constraintTop_toBottomOf="@id/mail"
-         />
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="86dp"
+            android:background="#90ffffff"
+            android:hint="Введите email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/pw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:background="#90ffffff"
+            android:hint="Введите пароль"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
 
 
-    <EditText
-        android:id="@+id/again_pw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:hint="Повторите пароль"
-        android:textColor="@color/black"
-        android:background="#90ffffff"
-        android:inputType="text"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@id/pw"
-        app:layout_constraintTop_toBottomOf="@id/pw"
-         />
-
+        <EditText
+            android:id="@+id/again_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:background="#90ffffff"
+            android:hint="Повторите пароль"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+    </LinearLayout>
 
     <Button
+        android:id="@+id/regbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="300dp"
         android:backgroundTint="#add827"
         android:text="Зарегистрироваться"
-        app:layout_constraintStart_toStartOf="@id/again_pw"
-        app:layout_constraintTop_toBottomOf="@id/again_pw"
         android:textSize="20dp"
-         />
+        app:layout_constraintStart_toStartOf="@id/number"
+        app:layout_constraintTop_toBottomOf="@id/number" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
